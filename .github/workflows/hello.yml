@@ -1,0 +1,15 @@
+name: hello workflow
+on: 
+  push:
+     branches:[main]
+jobs:
+
+  greet:
+   runs-on: ubantu-latest
+  
+    steps:
+      - name: say hello to users
+        run: echo "hello"
+        
+       - name: say hello to username
+        run: echo "hello $USER"
