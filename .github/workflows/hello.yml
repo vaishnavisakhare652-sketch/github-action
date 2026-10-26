@@ -8,7 +8,6 @@ on:
 jobs:
   greet:
     runs-on: ubuntu-latest
-
     steps:
       - name: say hello to users
         run: echo "hello"
@@ -16,9 +15,9 @@ jobs:
       - name: say hello to username
         run: echo "hello $USER"
 
- 
-details:
-  runs-on: ubuntu-latest
-  steps:
-    - name: version of Python and Docker
-      run: docker --version && python --version
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: version of Python and Docker
+        run: docker --version && python --version
+
