@@ -1,0 +1,30 @@
+
+name: CICD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        run: echo "Code cloned from GitHub"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build docker container
+        run: echo "Docker container build"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test the container
+        run: echo "Testing the container"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy application
+        run: echo "Deploying application"
